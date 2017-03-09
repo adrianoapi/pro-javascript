@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../layout.css">
+    </head>
+    <body>
+        <div>Exemplo de múltiplas variáveis, referindo-se a um único objeto</div>
+        <a href="../">Voltar</a>
+        <script>
+            // Conjunto de obj para um objeto vazio
+            // (Usar {} é menor do que ' Object()') novo
+            var obj = {};
+            console.log(obj);
+
+            // objRef agora refere-se a outro objeto
+            var refToObj = obj;
+            console.log(obj);
+
+            // Modificar uma propriedade no objeto original
+            obj.oneProperty = true;
+            console.log(obj);
+
+            // Vemos agora que a mudança é representada em ambas as variáveis
+            // (Uma vez que ambas se referem ao mesmo objeto)
+            console.log(obj.oneProperty === refToObj.oneProperty);
+
+            // Esta mudança ocorre em ambos objetos, obj e refToObj
+            // são as duas referências
+            refToObj.anotherProperty = true;
+            console.log(obj.anotherProperty === refToObj.anotherProperty);
+        </script>
+    </body>
+</html>
