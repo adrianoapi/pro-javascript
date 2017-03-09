@@ -9,11 +9,18 @@
     <body>
         <a href="../">Voltar</a>
         <script>
-            var items = 'test';
-            var itemsRef = items;
+            var foo = 'test';
+            if (true) {
+                var foo = 'new test';
+            }
+            console.log(foo === 'new test');
             
-            items += 'ing';
-            console.log(items != itemsRef);
+            function test(){
+                var foo = 'old test';
+            }
+            
+            test();
+            console.log(foo === 'new test');
         </script>
     </body>
 </html>
