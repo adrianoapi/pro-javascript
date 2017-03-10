@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../layout.css">
+    </head>
+    <body>
+        <div>Exemplos de mudar o contexto das funções</div>
+        <a href="../">Voltar</a>
+        <script>
+            function changeColor(color) {
+                this.style.color = color;
+            }
+            changeColor('white');
+            var main = document.createElement('div');
+            changeColor.call(main, 'black');
+            console.log(main.style.color);
+            function setBodyColor() {
+                changeColor.apply(document.body, arguments);
+            }
+            setBodyColor('black');
+        </script>
+    </body>
+</html>
