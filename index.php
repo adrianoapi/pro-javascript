@@ -47,6 +47,12 @@ class index
                 ), array(
                     'link' => "02",
                     'title' => "Creating People"
+                ), array(
+                    'link' => "03",
+                    'title' => "Object.create Polyfill"
+                ), array(
+                    'link' => "04",
+                    'title' => "O Object Person, com um método de fábrica"
                 )
             )
         );
