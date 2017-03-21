@@ -11,9 +11,9 @@
         <a href="../">Voltar</a>
         <script>
             var Person = {
-                firstName: 'Adriano',
-                lastName: 'Costa',
-                birthDate: new Date('1987-11-20'),
+                firstName: 'John',
+                lastName: 'Connolly',
+                birthDate: new Date('1964-09-05'),
                 gender: 'male',
                 getAge: function () {
                     var today = new Date();
@@ -22,10 +22,8 @@
                     return Math.floor(diff / year);
                 },
                 toString: function () {
-                    return this.firstName + ' ' +
-                            this.lastName + ' is a ' +
-                            this.getAge() + ' year old ' +
-                            this.gender;
+                    return this.firstName + ' ' + this.lastName + ' is a ' + this.getAge() +
+                            ' year-old ' + this.gender;
                 },
                 extend: function (config) {
                     var tmp = Object.create(this);
@@ -37,14 +35,6 @@
                     return tmp;
                 }
             };
-
-            var bob = Person.extend({
-                firstName: 'João',
-                lastName: 'Silva',
-                birthDate: new Date('1969-06-02')
-            });
-            
-            console.log(bob.toString());
         </script>
     </body>
 </html>
